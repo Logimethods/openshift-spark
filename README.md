@@ -6,4 +6,8 @@
 
 # Push
 
-    make push REPO=[REGISTRY_HOST/][USERNAME]
+    make push REPO=hub.docker.com/r/logimethods
+    
+# Deploy
+
+    make create
