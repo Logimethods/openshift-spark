@@ -11,3 +11,8 @@
 # Deploy
 
     make create
+
+# Zeppelin (external)
+
+    docker pull dylanmei/zeppelin
+    docker run --rm -p 8080:8080 dylanmei/zeppelin
