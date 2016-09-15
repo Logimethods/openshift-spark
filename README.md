@@ -35,7 +35,7 @@ See "Client tools:" on [Setup instructions for All-In-One VM that matches Online
 
     cd [root of this Git Project]
     
-### Build & Push the `logimethods/openshift-spark` Spark Docker Image [Optional]
+### [Optional] Build & Push the `logimethods/openshift-spark` Spark Docker Image
 
     make push REPO=hub.docker.com/r/logimethods
     
@@ -47,7 +47,7 @@ See "Client tools:" on [Setup instructions for All-In-One VM that matches Online
 
     cd zeppelin
     
-### Build & Push the `logimethods/openshift-zeppelin` Spark Docker Image [Optional]
+### [Optional] Build & Push the `logimethods/openshift-zeppelin` Spark Docker Image
 
     make push REPO=hub.docker.com/r/logimethods
     
