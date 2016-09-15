@@ -29,7 +29,7 @@ See "Client tools:" on [Setup instructions for All-In-One VM that matches Online
     
 ### Create and join the Spark Cluster project
 
-    oc new-project spark-cluster --display-name="Spark Cluster" --description="..."
+    oc new-project spark-cluster --display-name="Spark Cluster" --description="https://github.com/Logimethods/openshift-spark"
     oc project spark-cluster
     
 ## Build & Deploy the Spark Cluster
