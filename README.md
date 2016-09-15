@@ -60,5 +60,5 @@ See "Client tools:" on [Setup instructions for All-In-One VM that matches Online
 
 * Log in the [OpenShift Console](https://10.2.2.2:8443/console).
 * Choose the "Spark Cluster" project
-* Create a route on the spark-master-webui service
+* Create a route to the "spark-master-webui" service
 * Open that URL
