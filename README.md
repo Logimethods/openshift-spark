@@ -1,6 +1,6 @@
 # Apache Spark images for OpenShift
 
-# Install OpenShift
+## Install OpenShift
 
 See [Setup instructions for All-In-One VM that matches Online](https://www.openshift.org/vm/instructions1_2.html)
 
@@ -17,41 +17,48 @@ Start Vagrant:
 
     vagrant up
 
-# Connect to OpenShift
+## Connect to OpenShift
 
-## Install the CLI
+### Install the CLI
 
 See "Client tools:" on [Setup instructions for All-In-One VM that matches Online](https://www.openshift.org/vm/instructions1_2.html)
 
-## Login to OpenShift
+### Login to OpenShift
 
     oc login https://10.2.2.2:8443
     
-## Create and join the Spark Cluster project
+### Create and join the Spark Cluster project
 
     oc new-project spark-cluster --display-name="Spark Cluster" --description="..."
     oc project spark-cluster
     
-# Build & Deploy the Spark Cluster
+## Build & Deploy the Spark Cluster
 
     cd [root of this Git Project]
     
-## Build & Push the `logimethods/openshift-spark` Spark Docker Image [Optional]
+### Build & Push the `logimethods/openshift-spark` Spark Docker Image [Optional]
 
     make push REPO=hub.docker.com/r/logimethods
     
-## Deploy
+### Deploy
 
     make deploy
 
-# Build & Deploy Zeppelin
+## Build & Deploy Zeppelin
 
     cd zeppelin
     
-## Build & Push the `logimethods/openshift-zeppelin` Spark Docker Image [Optional]
+### Build & Push the `logimethods/openshift-zeppelin` Spark Docker Image [Optional]
 
     make push REPO=hub.docker.com/r/logimethods
     
-## Deploy
+### Deploy
 
     make deploy
+
+## Make use of Zeppelin
+
+* Log in the [OpenShift Console](https://10.2.2.2:8443/console).
+* Choose the "Spark Cluster" project
+* Create a route on the spark-master-webui service
+* Open that URL
