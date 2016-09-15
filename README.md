@@ -2,7 +2,7 @@
 
 ## Install OpenShift
 
-See [Setup instructions for All-In-One VM that matches Online](https://www.openshift.org/vm/instructions1_2.html)
+See [Setup instructions for All-In-One VM that matches Online - version 1.2](https://www.openshift.org/vm/instructions1_2.html)
 
     vagrant init thesteve0/openshift-origin
     
@@ -21,8 +21,8 @@ Start Vagrant:
 
 ### Install the CLI
 
-* See "Client tools:" on [Setup instructions for All-In-One VM that matches Online](https://www.openshift.org/vm/instructions1_2.html)
-* Add the directory containing `oc` to the shell path.
+* See "Client tools:" on [Setup instructions for All-In-One VM that matches Online - version 1.2](https://www.openshift.org/vm/instructions1_2.html) or (probably best) [Installing the CLI](https://docs.openshift.org/latest/cli_reference/get_started_cli.html#installing-the-cli)
+* Add the directory containing `oc` to the shell path (if not install through a tool like Homebrew).
 
 ### Login to OpenShift
 
