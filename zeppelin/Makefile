@@ -12,7 +12,8 @@ push: build
 	docker tag openshift-zeppelin $(IMAGE)
 	docker push $(IMAGE)
 
-deploy: oc process -f template.yaml -v IMAGE=$(IMAGE) > template.active
+deploy: template.yaml
+	oc process -f template.yaml -v IMAGE=$(IMAGE) > template.active
 	oc create -f template.active
 
 destroy: template.active

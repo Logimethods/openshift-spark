@@ -12,7 +12,7 @@ push: build
 	docker tag openshift-spark $(SPARK_IMAGE)
 	docker push $(SPARK_IMAGE)
 
-deploy:push template.yaml
+deploy: template.yaml
 	oc process -f template.yaml -v SPARK_IMAGE=$(SPARK_IMAGE) > template.active
 	oc create -f template.active
 
