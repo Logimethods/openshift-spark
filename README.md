@@ -25,13 +25,12 @@ See "Client tools:" on [Setup instructions for All-In-One VM that matches Online
 
 ### Login to OpenShift
 
-    oc login https://10.2.2.2:8443
+    oc login https://10.2.2.2:8443      [admin/admin]
     
 ### Create and join the Spark Cluster project
 
     oc new-project spark-cluster --display-name="Spark Cluster" --description="https://github.com/Logimethods/openshift-spark"
-    oc project spark-cluster
-    
+
 ## Build & Deploy the Spark Cluster
 
     cd [root of this Git Project]
