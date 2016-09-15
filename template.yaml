@@ -91,6 +91,8 @@ objects:
                 value: spark://${MASTER_NAME}:7077
               - name: SPARK_MASTER_UI_ADDRESS
                 value: http://${MASTER_NAME}-webui:8080
+    spec:
+      completionDeadlineSeconds: 1800
 
 parameters:
 - name: SPARK_IMAGE
@@ -99,7 +101,7 @@ parameters:
 - name: MASTER_NAME
   description: master name used as a service name and a selector
   generate: expression
-  from: "spark-master-[a-z0-9]{4}"
+  from: "spark-master"
   required: true
 - name: WORKER_NAME
   description: worker name used as a selector

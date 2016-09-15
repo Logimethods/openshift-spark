@@ -47,6 +47,8 @@ objects:
             ports:
               - containerPort: 8080
                 protocol: TCP
+    spec:
+      completionDeadlineSeconds: 1800
 
 parameters:
 - name: IMAGE
