@@ -1,18 +1,56 @@
 # Apache Spark images for OpenShift
 
-# Build
+# Install OpenShift
+
+See [Setup instructions for All-In-One VM that matches Online](https://www.openshift.org/vm/instructions1_2.html)
+
+    vagrant init thesteve0/openshift-origin
+    
+Edit the generated Vagrantfile:
+
+      config.vm.provider "virtualbox" do |vb|
+        vb.memory = "8192"
+        vb.cpus = 4
+      end
+ 
+Start Vagrant:
+
+    vagrant up
+
+# Connect to OpenShift
+
+## Install the CLI
+
+See "Client tools:" on [Setup instructions for All-In-One VM that matches Online](https://www.openshift.org/vm/instructions1_2.html)
+
+## Login to OpenShift
+
+    oc login https://10.2.2.2:8443
+    
+## Create and join the Spark Cluster project
+
+    oc new-project spark-cluster --display-name="Spark Cluster" --description="..."
+    oc project spark-cluster
+    
+# Build & Deploy the Spark Cluster
+
+    cd [root of this Git Project]
+    
+## Build
 
     make
 
-# Push
+## Push
 
     make push REPO=hub.docker.com/r/logimethods
     
-# Deploy
+## Deploy
 
     make create
 
-# Zeppelin (external)
+# Build & Deploy Zeppelin
 
-    docker pull dylanmei/zeppelin
-    docker run --rm -p 8080:8080 dylanmei/zeppelin
+    cd zeppelin
+    make
+    make push REPO=hub.docker.com/r/logimethods
+    make create
