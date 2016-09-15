@@ -56,4 +56,4 @@ See "Client tools:" on [Setup instructions for All-In-One VM that matches Online
     
 ## Deploy
 
-    make create
+    make deploy
