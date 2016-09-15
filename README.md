@@ -21,9 +21,8 @@ Start Vagrant:
 
 ### Install the CLI
 
-See "Client tools:" on [Setup instructions for All-In-One VM that matches Online](https://www.openshift.org/vm/instructions1_2.html)
-
-**Add the directory containing `oc` to the shell path.**
+* See "Client tools:" on [Setup instructions for All-In-One VM that matches Online](https://www.openshift.org/vm/instructions1_2.html)
+* Add the directory containing `oc` to the shell path.
 
 ### Login to OpenShift
 
