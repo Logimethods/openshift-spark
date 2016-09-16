@@ -26,7 +26,7 @@ Start Vagrant:
 
 ### Login to OpenShift
 
-    oc login https://10.2.2.2:8443      [admin/admin]
+    oc login https://10.2.2.2:8443      [you can choose any user/password you want]
     
 ### Create and join the Spark Cluster project
 
@@ -58,7 +58,7 @@ Start Vagrant:
 
 ## Make use of Zeppelin
 
-* Log in the [OpenShift Console](https://10.2.2.2:8443/console).
+* Log in to the [OpenShift Console](https://10.2.2.2:8443/console) with the user/password already defined through the `oc login` command.
 * Choose the "Spark Cluster" project
 * Create a route to the "spark-master-webui" service
 * Open that URL
